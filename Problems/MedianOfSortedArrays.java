@@ -5,33 +5,34 @@ import java.util.Arrays;
 public class MedianOfSortedArrays {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         double median = 0;
-        //Arrays.sort(nums1);
-        //Arrays.sort(nums2);
         int[] array = new int[nums1.length + nums2.length];
         int index = 0;
+        int indexNums2 = 0;
 
         for (int i = 0; i < nums1.length; i++) {
             array[i] = nums1[i];
             index = i + 1;
         }
 
-        int nums2Ind = 0;
         for (int j = index; j < array.length; j++) {
-            array[j] = nums2[nums2Ind];
-            nums2Ind++;
+            array[j] = nums2[indexNums2];
+            indexNums2++;
         }
 
         Arrays.sort(array);
-        for (int j = 0; j < array.length; j++) {
-            System.out.println(array[j]);
+
+        if (array.length % 2 != 0){
+            median = array[(int) Math.floor(array.length/(double)2)];
+        } else {
+            median = (array[array.length/2] + array[(array.length/2)-1]) / (double)2;
         }
         return median;
     }
 
     public static void main(String[] args) {
-        int[] num1 = {};
-        int[] num2 = {3};
-        findMedianSortedArrays(num1, num2);
+        int[] num1 = {2};
+        int[] num2 = {};
+        System.out.println(findMedianSortedArrays(num1, num2));
     }
     
 }
