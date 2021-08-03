@@ -9,7 +9,7 @@ public class AddTwoNumbers {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
-    public void add(ListNode l1, ListNode l2) {
+    public String add(ListNode l1, ListNode l2) {
         int num1 = getReverse(l1);
         int num2 = getReverse(l2);
 
@@ -20,7 +20,7 @@ public class AddTwoNumbers {
             revSum += sumStr.charAt(i);
         }
         
-        //return revSum;
+        return revSum;
     }
 
     private int getReverse(ListNode list) {
