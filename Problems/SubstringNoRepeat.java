@@ -1,6 +1,8 @@
 package Problems;
 
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 
 public class  SubstringNoRepeat {
@@ -39,6 +41,22 @@ public class  SubstringNoRepeat {
 
     private boolean isInSubstring(String sub, String s, int i) {
         return sub.contains(Character.toString(s.charAt(i)));
+    }
+
+    public int alternativeSolution(String s) {
+        int windowStart=0, maxLength=0;
+        Map<Character,Integer> charIndexMap = new HashMap<>();
+        
+        for(int windowEnd=0;windowEnd < s.length();windowEnd++){
+            Character rightChar = s.charAt(windowEnd);
+            if(charIndexMap.containsKey(rightChar)){
+                windowStart = Math.max(windowStart, charIndexMap.get(rightChar)+1);
+            }
+            charIndexMap.put(rightChar,windowEnd);
+            maxLength= Math.max(maxLength,windowEnd-windowStart+1);
+        }
+        
+        return maxLength;
     }
 
     public static void main(String[] args) {
