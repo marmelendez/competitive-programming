@@ -62,6 +62,6 @@ public class  SubstringNoRepeat {
     public static void main(String[] args) {
         String s = "pwwkew";
         SubstringNoRepeat sub = new SubstringNoRepeat();
-        System.out.println(sub.lengthOfLongestSubstring(s));
+        System.out.println(sub.alternativeSolution(s));
     }
 }
