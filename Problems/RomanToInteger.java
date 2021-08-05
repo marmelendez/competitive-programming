@@ -9,11 +9,11 @@ public class RomanToInteger {
                             break;
                 case 'V':   num+= 5;
                             break;
-                case 'X':   num += beforeCases('L', 'C', i, s, 10);//L AND C
+                case 'X':   num += beforeCases('L', 'C', i, s, 10);
                             break;
                 case 'L':   num+= 50;
                             break;
-                case 'C':   num += beforeCases('D', 'M', i, s, 100);//D AND M
+                case 'C':   num += beforeCases('D', 'M', i, s, 100);
                             break;
                 case 'D':   num+= 500;
                             break;
@@ -39,7 +39,7 @@ public class RomanToInteger {
 
     public static void main(String[] args) {
         RomanToInteger r2i = new RomanToInteger();
-        String s = "III";
+        String s = "MCMXCIV";
         System.out.println(r2i.romanToInt(s));
     }
     
