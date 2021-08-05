@@ -8,9 +8,13 @@ public class CommonPrefix {
         for (int i = 1; i < strs.length; i++) {
             String newPrefix = "";
             for (int j = 0; j < strs[i].length(); j++) {
-                if (start.charAt(j) == strs[i].charAt(j)) {
-                    newPrefix += start.charAt(j);
-                } else {
+                try {
+                    if (start.charAt(j) == strs[i].charAt(j)) {
+                        newPrefix += start.charAt(j);
+                    } else {
+                        break;
+                    }
+                } catch(Exception e) {
                     break;
                 }
             }
@@ -18,12 +22,12 @@ public class CommonPrefix {
                 prefix = newPrefix;
             }
         }
+
         return prefix;
     }
 
     public static void main(String[] args) {
-        String[] strs = {"flower","flight","flow"};
+        String[] strs = {"","b"};
         System.out.println(longestCommonPrefix(strs)); 
     }
-
 }
