@@ -31,17 +31,19 @@ public class CommonPrefix {
         if(strs.length==0)
             return "";
         
-        for(int i=0;i<strs.length; i++){
-            while(strs[i].indexOf(ans)!=0){
+        for(int i=0;i<strs.length; i++){ //recorre las palabras
+            while(strs[i].indexOf(ans)!=0){ //si la palabra en 1 contiene ans == 0, si no:
                 ans = ans.substring(0, ans.length() -1 );
+                System.out.println(ans);
             }
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        String[] strs = {"","b"};
+        String[] strs = {"flow","flower","flight"};
         CommonPrefix problem = new CommonPrefix();
-        System.out.println(problem.longestCommonPrefix(strs)); 
+        System.out.println(problem.alternativeSolution(strs)); 
+
     }
 }
