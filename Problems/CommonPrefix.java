@@ -44,6 +44,5 @@ public class CommonPrefix {
         String[] strs = {"flow","flower","flight"};
         CommonPrefix problem = new CommonPrefix();
         System.out.println(problem.alternativeSolution(strs)); 
-
     }
 }
