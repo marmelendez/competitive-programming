@@ -25,18 +25,22 @@ public class ReverseInt {
     }
 
     public static int alternativeSolution(int x) {
-        int rev = 0;
+        Long res = Long.valueOf(0);
         while(x != 0) {
             int digit = x % 10;
-            rev = rev * 10 + digit;
+            res = res * 10 + digit;
             x /= 10;
-            System.out.println(rev);
+            System.out.println(res);
         }
-        return rev;
+        if (res < Math.pow(-2, 31) || res > Math.pow(2, 31) - 1) {
+            return 0;
+        } 
+        return res.intValue();
     }
 
+
     public static void main(String[] args) {
-        int x = -123;
+        int x = 1534236469;
         System.out.println(alternativeSolution(x));
     }
 }
