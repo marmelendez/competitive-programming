@@ -6,7 +6,16 @@ public class ReverseInt {
         String resStr = "";
         int res;
         for (int i = xStr.length() - 1; i >= 0; i--) {
-            resStr += xStr.charAt(i);
+            if(i == 0) {
+                if(xStr.charAt(i) == '-'){
+                    resStr = xStr.charAt(i) + resStr;
+                } else if(xStr.charAt(i) != '0') {
+                    resStr += xStr.charAt(i);
+                }
+            } else {
+                resStr += xStr.charAt(i);
+            }
+            //check when is 0 or -
         }
 
         res = Integer.valueOf(resStr);
@@ -15,7 +24,7 @@ public class ReverseInt {
     }
 
     public static void main(String[] args) {
-        int x = 123;
+        int x = -123;
         System.out.println(reverse(x));
     }
 }
