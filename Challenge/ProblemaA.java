@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class ProblemaA {
 
     public int getCoins(int n, int[] values) {
-        //int nCoins = 0;
         Arrays.sort(values);
 
         int sum = 0;
