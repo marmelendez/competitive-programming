@@ -1,7 +1,7 @@
 package Challenge;
 
 import java.util.Arrays;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ProblemaA {
 
@@ -39,6 +39,7 @@ public class ProblemaA {
             int x = s.nextInt();
             if (x % k == 0)
                 count++;
+                test this 
         }
         System.out.println(count);*/
     }
