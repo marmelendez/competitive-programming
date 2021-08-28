@@ -1,17 +1,17 @@
 package Challenge;
 
 
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+ }
+ 
 public class ProbleF {
-
-    class Node {
-        int data;
-        Node left;
-        Node right;
-
-        Node(int data) {
-            this.data = data;
-        }
-     }
 
     boolean isBST(Node root, int minVal, int maxVal) {
         if (root == null) {
@@ -40,6 +40,6 @@ public class ProbleF {
         root.left.right = new Node(4);
         root.right.left = new Node(7);
         root.right.right = new Node(2);
-        System.out.println(res.isBST(root));
+        System.out.println(res.checkBST(root));
     }    
 }
