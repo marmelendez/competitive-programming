@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <cmath>
 
 using namespace std;
 struct TreeNode {
@@ -55,7 +56,19 @@ public:
         vector<int> res = printLevelOrder(root);
         int i = getIndex(res,p->val);
         int j = getIndex(res,q->val);
-        cout << i <<"  "<<j<<endl;
+
+        vector<int> pAncestors;
+        vector<int> qAncestors;
+
+        while (i > 0) {
+            int index = floor((i-1)/2); // 1
+            pAncestors.push_back(res[index]);
+            i = index;
+        }
+
+        for (int k = 0; k < pAncestors.size();k++) {
+            cout << pAncestors[k] << " ";
+        }
 
         
     }
