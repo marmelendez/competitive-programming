@@ -1,4 +1,4 @@
-package Challenge;
+package Problems;
 
 import java.io.IOException;
 import java.util.Arrays;
