@@ -1,19 +1,14 @@
-#!/bin/python3
+# HACKER RANK PROBLEM: Caesar Cipher
+# Julius Caesar protected his confidential information by encrypting it using a cipher. 
+# Caesar's cipher shifts each letter by a number of letters. 
+# If the shift takes you past the end of the alphabet, just rotate back to the front of the alphabet. 
+# In the case of a rotation by 3, w, x, y and z would map to z, a, b and c.
 
 import math
 import os
 import random
 import re
 import sys
-
-#
-# Complete the 'caesarCipher' function below.
-#
-# The function is expected to return a STRING.
-# The function accepts following parameters:
-#  1. STRING s
-#  2. INTEGER k
-#
 
 def caesarCipher(s, k):
     output = ""
@@ -34,8 +29,6 @@ def caesarCipher(s, k):
             output += i
     return output
 
-
-
 if __name__ == '__main__':
 
     n = int(input().strip())
@@ -48,11 +41,10 @@ if __name__ == '__main__':
 
     print(result)
 
-######################
-##### Test cases #####
-######################
 
-##### Case 1 #########
+##### Test cases #####
+
+##### Case 1 #####
 ### Input
 # x
 # There’s-a-starman-waiting-in-the-sky
@@ -61,7 +53,7 @@ if __name__ == '__main__':
 ### Output
 # Wkhuh’v-d-vwdupdq-zdlwlqj-lq-wkh-vnb
 
-##### Case 2 #########
+##### Case 2 #####
 #### Input
 # x
 # abcdefghijklmnopqrstuvwxyz
@@ -70,7 +62,7 @@ if __name__ == '__main__':
 ### Output
 # defghijklmnopqrstuvwxyzabc
 
-##### Case 3 #########
+##### Case 3 #####
 #### Input
 # 11
 # middle-Outz
