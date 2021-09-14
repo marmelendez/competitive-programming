@@ -13,15 +13,17 @@ import sys
 #
 
 def aux(s, alphabet, permutation_length):
-    if (len(s) == permutation_length):
-        return s
+
+    if (permutation_length == 0):
+        print(s)
+        return 
     for i in alphabet:
-        s+= i
-        return aux(s, alphabet, permutation_length)
+        s_new = s + i
+        aux(s_new, alphabet, permutation_length - 1)
 
 
 def string_permutations(alphabet, permutation_length):
-    print(aux("", alphabet, permutation_length))
+    aux("", alphabet, permutation_length)
 
 if __name__ == '__main__':
     alphabet_input = input().rstrip().split()
