@@ -13,7 +13,6 @@ import sys
 #
 
 def aux(s, alphabet, permutation_length):
-
     if (permutation_length == 0):
         print(s)
         return 
