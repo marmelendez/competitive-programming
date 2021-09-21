@@ -5,6 +5,7 @@ import os
 import random
 import re
 import sys
+import queue
 
 class BinarySearchTreeNode:
     def __init__(self, node_data):
@@ -55,8 +56,17 @@ def print_binary_search_tree_inorder_traversal(node, sep):
 #
 
 def level_order_print(root):
-    # Write your code here
-
+    q = []
+    q.append(root)
+    while (len(q) > 0):
+        front = q.pop(0)
+        print(front.data, end = " ")
+        if (front.left != None):
+            q.append(front.left)
+        if (front.right != None):
+            q.append(front.right)
+    print()
+        
 if __name__ == '__main__':
     input_bst_count = int(input().strip())
 
