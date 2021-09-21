@@ -67,7 +67,6 @@ def bst_contains(root, number):
     return False
 
 if __name__ == '__main__':
-    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     input_bst_count = int(input().strip())
 
@@ -83,6 +82,3 @@ if __name__ == '__main__':
 
     print(does_contain)
 
-    #fptr.write(str(int(does_contain)) + '\n')
-
-    #fptr.close()
