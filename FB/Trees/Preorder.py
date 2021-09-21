@@ -55,7 +55,11 @@ def print_binary_search_tree_inorder_traversal(node, sep):
 #
 
 def preorder_traversal(bst):
-    # Write your code here
+    if (bst == None):
+        return 
+    print(bst.data)
+    preorder_traversal(bst.left)
+    preorder_traversal(bst.right)
 
 if __name__ == '__main__':
     input_bst_count = int(input().strip())
