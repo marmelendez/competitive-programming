@@ -5,6 +5,8 @@
         "vector": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp"
     }
 }
