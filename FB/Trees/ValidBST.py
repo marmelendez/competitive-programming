@@ -54,10 +54,16 @@ def insert_node_into_binary_tree(node, node_data):
 #
 
 def isValidBST(bst):
-    # Write your code here
+    if (bst == None):
+        return 1
+    if ((bst.left != None and bst.left.data > bst.data) 
+        or (bst.right != None and bst.right.data < bst.data)):
+        return 0
+    if (isValidBST(bst.right) == 0 or isValidBST(bst.left) == 0):
+        return 0
+    return 1
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     input_bst_count = int(input().strip())
 
@@ -69,6 +75,4 @@ if __name__ == '__main__':
 
     is_valid = isValidBST(input_bst)
 
-    fptr.write(str(int(is_valid)) + '\n')
-
-    fptr.close()
+    print(is_valid)
