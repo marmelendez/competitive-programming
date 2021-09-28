@@ -35,3 +35,50 @@ def print_singly_linked_list(node, sep, fptr):
 
         if node:
             fptr.write(sep)
+
+#
+# Complete the 'removeDuplicates' function below.
+#
+# The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+# The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+#
+
+#
+# For your reference:
+#
+# SinglyLinkedListNode:
+#     int data
+#     SinglyLinkedListNode next
+#
+#
+
+def removeDuplicates(llist):
+    current_node = llist
+    while (current_node != None and current_node.next != None):
+        while (current_node.next != None and current_node.data == current_node.next.data):
+            current_node.next = current_node.next.next
+        current_node = current_node.next
+    return llist
+#current_node = 3
+#current_node next = 
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        llist_count = int(input())
+
+        llist = SinglyLinkedList()
+
+        for _ in range(llist_count):
+            llist_item = int(input())
+            llist.insert_node(llist_item)
+
+        llist1 = removeDuplicates(llist.head)
+
+        print_singly_linked_list(llist1, ' ', fptr)
+        fptr.write('\n')
+
+    fptr.close()
