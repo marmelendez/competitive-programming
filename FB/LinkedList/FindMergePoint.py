@@ -52,11 +52,8 @@ def findMergeNode(head1, head2):
     while (node_list1 != None):
         dic.update({node_list1:node_list1.data}) 
         node_list1 = node_list1.next
-    
-    print(dic)
 
     while (node_list2 != None):
-        print(node_list2.data)
         if (node_list2 in dic.keys()):
             return node_list2.data
         node_list2 = node_list2.next

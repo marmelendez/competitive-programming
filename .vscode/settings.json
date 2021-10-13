@@ -8,6 +8,9 @@
         "complex": "cpp",
         "iosfwd": "cpp",
         "string": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "algorithm": "cpp",
+        "map": "cpp",
+        "__locale": "cpp"
     }
 }
