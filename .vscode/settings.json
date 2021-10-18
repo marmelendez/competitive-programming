@@ -11,6 +11,12 @@
         "array": "cpp",
         "algorithm": "cpp",
         "map": "cpp",
-        "__locale": "cpp"
-    }
+        "__locale": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "iterator": "cpp",
+        "utility": "cpp",
+        "stdexcept": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
