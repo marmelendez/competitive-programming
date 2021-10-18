@@ -26,9 +26,11 @@ int main() {
     numbers.push_back(2);
     numbers.push_back(3);
     numbers.push_back(4);
-    numbers.push_back(7);
+    numbers.push_back(5);
     numbers.push_back(4);
     numbers.push_back(3);
+
+    cout << numbers.size() << endl;
 
     cout << findNonDuplicate(numbers) << endl;
 }
