@@ -2,6 +2,39 @@
 
 using namespace std;
 
+// rotational cipher
+// Test case
+// 1. "Zeb-129" 3 -> 
+// Case 1: Uppercase A-Z 
+// Case 2: Lowercase a-z
+// Case 3: Number 0-9
+
+// 1. "Zeb-129" 30 -> 
+// Case 1: Uppercase A-Z 
+// Case 2: Lowercase a-z
+// Case 3: Number 0-9
+
+
+// ASCII
+// Case 1: Uppercase A-Z: 65-90
+// Case 2: Lowercase a-z: 97-122
+// Case 3: Number 0-9: 48-57
+
+// SOLUTION
+// Check the case: alpha(lower, upper) or digit
+
+// Add the rotational factor
+// Case 1: Uppercase A-Z: 65-90
+// ind = character + factor % 26
+
+// Case 2: Lowercase a-z: 97-122
+// ind = character + factor % 26
+
+// Case 3: Number 0-9: 48-57
+// ind = character + factor % 10
+
+// if ind > lastRange -> ind = first + (ind - last) -1
+
 char helper(int first, int last, int sum) {
   if (sum > last) {
     sum = first + (sum - last) -1;
