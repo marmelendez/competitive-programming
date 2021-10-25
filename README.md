@@ -1,12 +1,12 @@
 # Programming
 Some coding problems to practice:
 
-- [Numbers](competitive-programming/Problems/Numbers)
-- [Strings](competitive-programming/Problems/Strings)
-- [Arrays](competitive-programming/Problems/Arrays)
-- [Linked list](competitive-programming/Problems/LinkedList)
-- [Stack and queues](competitive-programming/Problems/StacksAndQueues)
-- [Trees](competitive-programming/Problems/Trees)
-- [Heaps](competitive-programming/Problems/Heaps)
-- [Graphs](competitive-programming/Problems/Graphs)
-- [Sorting](competitive-programming/Problems/Sorting)
+- [Numbers](https://github.com/marmelendez/competitive-programming/tree/main/Problems/Numbers)
+- [Strings](https://github.com/marmelendez/competitive-programming/tree/main/Problems/Strings)
+- [Arrays](https://github.com/marmelendez/competitive-programming/tree/main/Problems/Arrays)
+- [Linked list](https://github.com/marmelendez/competitive-programming/tree/main/Problems/LinkedList)
+- [Stack and queues](https://github.com/marmelendez/competitive-programming/tree/main/Problems/StacksAndQueues)
+- Trees
+- Heaps
+- Graphs
+- [Sorting](https://github.com/marmelendez/competitive-programming/tree/main/Problems/Sorting)
